@@ -30,7 +30,7 @@ module.exports = {
         },
         { 
           test: /\.handlebars$/,
-          loader: "handlebars-loader"
+          loader: 'handlebars-template-loader'
         },
         {
           test: /\.m?js$/,
