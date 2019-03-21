@@ -1,7 +1,100 @@
 .geo-popup {
     max-height: 525px;
-    min-height: 250px;
-    width: 100%;
+    max-width: 375px;
     display: flex;
     flex-direction: column;
+    background-color: #ffff;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 30%;
+    left: 30%;
+}
+
+.geo-popup__header {
+    background-color: #ff8663;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.geo-popup__location {
+    font-size: 12px;
+    font-weight: 300;
+    padding: 15px 0 15px 30px;
+    color: #ffff;
+    position: relative;
+}
+
+.geo-popup__location::before {
+    content: "";
+    background: url('../../images/mini-marker.png');
+    width: 8px;
+    height: 14px;
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+}
+
+.geo-popup__btn-close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 30px;
+    right: 12px;
+}
+
+.geo-popup__btn-close__stick {
+    width: 16px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #ffff;
+    transform: rotate(45deg);
+    display: block;
+    position: relative;
+}
+
+.geo-popup__btn-close__stick::after {
+    content: "";
+    width: 16px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #ffff;
+    transform: rotate(-90deg);
+    position: absolute;
+}
+
+.geo-popup__container {
+    padding: 0 15px;
+}
+
+.geo-popup__comments {
+    padding: 15px 0;
+    border-bottom: solid 1px #f2f2f2;
+}
+
+.geo-popup__comment-up {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #4f4f4f;
+}
+
+.geo-popup__comment__person {
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.geo-popup__comment__place {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.geo-popup__comment__date {
+    font-size: 14px;
 }

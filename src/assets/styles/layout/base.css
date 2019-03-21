@@ -14,7 +14,7 @@ body {
 body {
     font-size: 16px;
     line-height: 1.42;
-    font-family: 'Franklin Gothic Medium', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 ul {
@@ -50,4 +50,6 @@ h6 {
 .wrapper {
     height: 100%;
     width: 100%;
+    position: relative;
+    background: #cdf0f7;
 }
