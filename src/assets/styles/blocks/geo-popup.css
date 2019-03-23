@@ -1,13 +1,13 @@
 .geo-popup {
-    max-height: 525px;
-    max-width: 375px;
+    /* max-height: 525px; */
+    width: 375px;
     display: flex;
     flex-direction: column;
-    background-color: #ffff;
+    background-color: #fff;
     border-radius: 10px;
 
     position: absolute;
-    top: 30%;
+    top: 10%;
     left: 30%;
 }
 
@@ -52,7 +52,7 @@
     width: 16px;
     height: 4px;
     border-radius: 3px;
-    background-color: #ffff;
+    background-color: #fff;
     transform: rotate(45deg);
     display: block;
     position: relative;
@@ -63,18 +63,38 @@
     width: 16px;
     height: 4px;
     border-radius: 3px;
-    background-color: #ffff;
+    background-color: #fff;
     transform: rotate(-90deg);
     position: absolute;
 }
 
 .geo-popup__container {
     padding: 0 15px;
+    margin-top: 15px;
 }
 
 .geo-popup__comments {
-    padding: 15px 0;
-    border-bottom: solid 1px #f2f2f2;
+    height: 160px;
+    overflow-y: scroll;
+}
+
+.geo-popup__comments::-webkit-scrollbar {
+    background-color: #fff;
+    width: 3px;
+}
+
+.geo-popup__comments::-webkit-scrollbar-thumb {
+    background-color: #c4c4c4;
+    border-radius: 5px;
+
+}
+
+.geo-popup__comment {
+    margin-bottom: 25px;
+}
+
+.geo-popup__comment:last-child {
+    margin-bottom: 10px;
 }
 
 .geo-popup__comment-up {
@@ -88,6 +108,7 @@
     font-size: 16px;
     font-weight: 500;
     margin-right: 10px;
+    white-space: nowrap;
 }
 
 .geo-popup__comment__place {
@@ -97,4 +118,65 @@
 
 .geo-popup__comment__date {
     font-size: 14px;
+}
+
+.geo-popup__comment__text {
+    font-size: 15px;
+}
+
+.geo-popup__hr {
+    margin: 10px 0;
+}
+
+.geo-popup__form {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.geo-popup__form__title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ff8663;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.geo-popup__form__input,
+.geo-popup__form__textarea {
+    width: 100%;
+    border-radius: 15px;
+    border: solid 1px #c4c4c4;
+    outline: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 10px 15px;
+}
+
+.geo-popup__form__textarea {
+    margin-bottom: 10px;
+}
+
+.geo-popup__form__input:focus,
+.geo-popup__form__textarea:focus {
+    box-shadow: 0 0 0 1px #c4c4c4;
+}
+
+.geo-popup__form__textarea {
+    resize: none;
+}
+
+.geo-popup__form__btn {
+    align-self: flex-end;
+    background-color: #ff8663;
+    border-radius: 10px;
+}
+
+.geo-popup__form__btn-send {
+    font-size: 12px;
+    font-weight: 300;
+    color: #fff;
+    display: block;
+    padding: 7px 17px;
 }
