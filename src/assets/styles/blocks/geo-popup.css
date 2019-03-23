@@ -26,6 +26,7 @@
     padding: 15px 0 15px 30px;
     color: #ffff;
     position: relative;
+    user-select: none;
 }
 
 .geo-popup__location::before {
