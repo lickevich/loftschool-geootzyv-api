@@ -1,14 +1,15 @@
 .geo-popup {
-    /* max-height: 525px; */
     width: 375px;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #fff;
     border-radius: 10px;
+    top: 0;
+    left: 0;
+}
 
-    position: absolute;
-    top: 10%;
-    left: 30%;
+.is-active {
+    display: flex;
 }
 
 .geo-popup__header {
@@ -90,7 +91,7 @@
 
 }
 
-.geo-popup__comment {
+.geo-popup__comment-list {
     margin-bottom: 25px;
 }
 
@@ -172,6 +173,10 @@
     align-self: flex-end;
     background-color: #ff8663;
     border-radius: 10px;
+}
+
+.geo-popup__form__btn:hover {
+    background-color: #c05c40;
 }
 
 .geo-popup__form__btn-send {

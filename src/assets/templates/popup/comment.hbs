@@ -1,0 +1,12 @@
+{{#each list}}
+    <li class="geo-popup__comment-item">
+        <div class="geo-popup__comment-up">
+            <h2 class="geo-popup__comment__person">{{ name }}</h2>
+            <h3 class="geo-popup__comment__place">{{ place }}</h3>
+            <div class="geo-popup__comment__date">{{ date }}</div>
+        </div>
+        <div class="geo-popup__comment-down">
+            <p class="geo-popup__comment__text">{{ comment }}</p>
+        </div>
+    </li>
+{{/each}}

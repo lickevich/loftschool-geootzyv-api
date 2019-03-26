@@ -7,48 +7,30 @@
     </div>
     <div class="geo-popup__container">
         <div class="geo-popup__comments">
-            <div class="geo-popup__comment">
-                <div class="geo-popup__comment-up">
-                    <h2 class="geo-popup__comment__person">Имя Человека</h2>
-                    <h3 class="geo-popup__comment__place">Местоположение</h3>
-                    <div class="geo-popup__comment__date">16.12.2009</div>
-                </div>
-                <div class="geo-popup__comment-down">
-                    <p class="geo-popup__comment__text">Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-                        <div class="geo-popup__comment">
-                <div class="geo-popup__comment-up">
-                    <h2 class="geo-popup__comment__person">Имя Человека</h2>
-                    <h3 class="geo-popup__comment__place">Местоположение</h3>
-                    <div class="geo-popup__comment__date">16.12.2009</div>
-                </div>
-                <div class="geo-popup__comment-down">
-                    <p class="geo-popup__comment__text">Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-                        <div class="geo-popup__comment">
-                <div class="geo-popup__comment-up">
-                    <h2 class="geo-popup__comment__person">Имя Человека</h2>
-                    <h3 class="geo-popup__comment__place">Местоположение</h3>
-                    <div class="geo-popup__comment__date">16.12.2009</div>
-                </div>
-                <div class="geo-popup__comment-down">
-                    <p class="geo-popup__comment__text">Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
+            <ul class="geo-popup__comment-list">
+                {{!-- <li class="geo-popup__comment-item">
+                    <div class="geo-popup__comment-up">
+                        <h2 class="geo-popup__comment__person">Имя человека</h2>
+                        <h3 class="geo-popup__comment__place">Местоположение</h3>
+                        <div class="geo-popup__comment__date">16.12.2009</div>
+                    </div>
+                    <div class="geo-popup__comment-down">
+                        <p class="geo-popup__comment__text">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </li> --}}
+            </ul>
         </div>
         <hr class="geo-popup__hr" noshade size="1" color="#f0f0f0">
         <form class="geo-popup__form">
             <h1 class="geo-popup__form__title">Ваш отзыв</h1>
             <label class="geo-popup__form__block">
-                <input type="text" class="geo-popup__form__input" placeholder="Ваше имя" name="login">
+                <input type="text" id="name-input" class="geo-popup__form__input" placeholder="Ваше имя" name="login">
             </label>
             <label class="geo-popup__form__block">
-                <input type="text" class="geo-popup__form__input" placeholder="Укажите место" name="place">
+                <input type="text" id="place-input" class="geo-popup__form__input" placeholder="Укажите место" name="place">
             </label>
             <label class="geo-popup__form__block">
-                <textarea  rows="6" class="geo-popup__form__textarea" placeholder="Поделитесь впечатлениями" name="comment"></textarea>
+                <textarea  rows="6" id="text-textarea" class="geo-popup__form__textarea" placeholder="Поделитесь впечатлениями" name="comment"></textarea>
             </label>
             <div class="geo-popup__form__btn">
                 <a href="#" class="geo-popup__form__btn-send">Добавить</a>
