@@ -32,16 +32,20 @@ export default function init() {
 
         var coords = e.get('coords');
 
-        popup.style.position = 'absolute';
-        popup.classList.add('is-active');
-
         // Создаем метку.
         myPlacemark = createPlacemark(coords);
         myMap.geoObjects.add(myPlacemark);
         getAddress(coords);
+        
+        popup.style.position = 'absolute';
+        popup.classList.add('is-active');
+        // console.log(storage.data);
+        const sumCoords = Math.round(sumArr(coords));
 
-        console.log(storage.data);
+        console.log(sumCoords);
+
     });
+
 
     // Создание метки.
     function createPlacemark(coords) {
@@ -49,7 +53,8 @@ export default function init() {
             iconCaption: 'поиск...'
         }, {
             preset: 'islands#redDotIconWithCaption',
-            draggable: false
+            draggable: false,
+            visible: true
         });
     }
 
@@ -81,27 +86,37 @@ export default function init() {
     sendButton.addEventListener('click', (e) => {
         e.preventDefault();
 
-        const date = new Date();
-        const day = date.getDay();
-        const mounth = date.getMonth();
-        const year = date.getFullYear();
-        const time = day + "." + mounth + "." + year;
+        // const date = new Date();
+        // const day = date.getDay();
+        // const mounth = date.getMonth();
+        // const year = date.getFullYear();
+        // const time = day + "." + mounth + "." + year;
 
-        storage.data = JSON.stringify({
-            list: [
-                {
-                    name: nameInput.value,
-                    place: placeInput.value,
-                    comment: textarea.value,
-                    date: time
-                }
-            ]
-        });
+        // storage.data = JSON.stringify({
+        //     list: [
+        //         {
+        //             name: nameInput.value,
+        //             place: placeInput.value,
+        //             comment: textarea.value,
+        //             date: time
+        //         }
+        //     ]
+        // });
+
+        commentList.innerHTML = template(JSON.parse(localStorage.data));
 
         nameInput.value = '';
         placeInput.value = '';
         textarea.value = '';   
     })
 
-    commentList.innerHTML = template(JSON.parse(localStorage.data));
+    function sumArr(arr) {
+        let sum = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i]
+        }
+
+        return sum;
+    }
 }
